@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>My site</title>
+ <link rel="stylesheet" type="text/css" href="site.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+   @keyframes starAnimation {
+     0% { transform: scale(1); opacity: 1; }
+     50% { transform: scale(1.5); opacity: 0.5; }
+     100% { transform: scale(1); opacity: 1; }
+   }
+
+   @keyframes rainbow {
+     0% { background: red; }
+     16% { background: orange; }
+     33% { background: yellow; }
+     50% { background: green; }
+     66% { background: blue; }
+     83% { background: indigo; }
+     100% { background: violet; }
+   }
+
+   body {
+     background: linear-gradient(to right, #000428, #004e92);
+     font-family: Arial, sans-serif;
+     color: #fff;
+     position: relative;
+     margin: 0;
+     padding: 0;
+   }
+   header {
+     text-align: center;
+     padding: 20px;
+     color: white;
+     position: relative;
+     z-index: 1;
+   }
+   nav {
+     display: flex;
+     justify-content: space-around;
+     padding: 20px;
+     background-color: rgba(0, 0, 0, 0.5);
+     border-bottom: 2px solid #ccc;
+     z-index: 1;
+   }
+   .button-75 {
+     background: linear-gradient(to right, #6a11cb, #2575fc);
+     border: none;
+     color: white;
+     padding: 10px 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 12px;
+     transition: background 0.3s, transform 0.3s;
+     z-index: 1;
+   }
+   .button-75:hover {
+     background: linear-gradient(to right, #2575fc, #6a11cb);
+     transform: scale(1.1);
+   }
+   h1, h2 {
+     margin: 10px 0;
+   }
+   iframe, video {
+     border: 2px solid #ccc;
+     border-radius: 12px;
+     margin-bottom: 20px;
+   }
+   aside {
+     padding: 20px;
+     background-color: rgba(0, 0, 0, 0.5);
+     border-left: 2px solid #ccc;
+   }
+   footer {
+     text-align: center;
+     padding: 20px;
+     background-color: #000;
+     color: white;
+   }
+   .fa {
+     padding: 20px;
+     font-size: 30px;
+     width: 50px;
+     text-align: center;
+     text-decoration: none;
+     margin: 5px 2px;
+     border-radius: 50%;
+   }
+   .fa-youtube {
+     background: #bb0000;
+     color: white;
+   }
+   .fa-twitter {
+     background: #55acee;
+     color: white;
+   }
+   .bgvideo video {
+     width: 100%;
+     height: auto;
+     opacity: 0.8;
+     z-index: 1;
+   }
+   .bgvideo h1 {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     font-size: 5vw; /* Размер текста "Сайт Матвія" увеличен до половины экрана */
+     background: none;
+     z-index: 2;
+   }
+   .text {
+     font-weight: bold;
+   }
+   main {
+     padding: 20px;
+     z-index: 1;
+   }
+   article {
+     background: rgba(255, 255, 255, 0.1);
+     padding: 15px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+   nav h2 {
+     margin-right: 10px;
+     font-weight: bold;
+     color: #6a11cb;
+     background: linear-gradient(to right, #6a11cb, #2575fc);
+     padding: 10px 20px;
+     border-radius: 12px;
+   }
+   nav a {
+     font-weight: bold;
+   }
+   .rainbow-star {
+     position: absolute;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     animation: starAnimation 4s infinite ease-in-out, rainbow 2s infinite linear;
+     z-index: 2;
+   }
+   .top-right {
+     top: 10%;
+     right: 10%;
+   }
+   .bottom-left {
+     bottom: 10%;
+     left: 10%;
+   }
+ </style>
+</head>
+<body> 
+<header>
+<div class="bgvideo">
+ <video src="video/163869 (720p).mp4" type="video/mp4" autoplay loop muted></video>
+ <h1>Сайт Матвія</h1>
+ <div class="rainbow-star top-right"></div>
+ <div class="rainbow-star bottom-left"></div>
+</div>
+</header>
+<nav>
+ <h2 class="button-75">Навігація</h2>
+ <a href="#about"><button class="button-75" role="button"><span class="text">About</span></button></a>
+ <a href="#gimn"><button class="button-75" role="button"><span class="text">Гімн</span></button></a>
+ <a href="#wiki"><button class="button-75" role="button"><span class="text">Вікіпедія</span></button></a>
+ <a href="#video1"><button class="button-75" role="button"><span class="text">Відео</span></button></a>
+</nav>
+<main>
+ <h2>Про мене</h2>
+ <section id="about">
+ <article>
+  Усім привіт! Мене звати Матвій, мені 14 з половиною років. Я родом з Херсону, але із-за дуже поганих обставин зараз я живу у місті Києві. Мені дуже подобається створювати сайти та писати код. Я також полюбляю проводити час с друзями та грати у приставку.
+ </article>
+ </section>
+ <iframe width="900" height="506" src="https://www.youtube.com/embed/1VCQDoYop64" title="Державний Гімн України - National Anthem of Ukraine - Rock version by Nicky Rubchenko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="gimn"></iframe>
+ <br>
+ <iframe src="https://uk.wikipedia.org/wiki/HTML" width="95%" height="500px" id="wiki"></iframe>
+
+<br>
+ <video controls width="100%" id="video1">
+ <source src="2024-05-25 14.00.20.mp4" type="video/mp4">
+ </video>
+</main>
+
+<aside>
+ <h2>Мої роботи</h2>
+ <a href="JS5.html" target="_blank"><button class="button-75" role="button"><span class="text">Перший політ у космос</span></button></a>
+ <a href="JS6.html" target="_blank"><button class="button-75" role="button"><span class="text">Логін</span></button></a>
+ <a href="JS11.html" target="_blank"><button class="button-75" role="button"><span class="text">Витягнуті числа</span></button></a>
+ <a href="JS13.html" target="_blank"><button class="button-75" role="button"><span class="text">Аналіз числа</span></button></a>
+ <a href="JS16.html" target="_blank"><button class="button-75" role="button"><span class="text">Знаходження номеру введеної букви у алфавіті</span></button></a>
+ <a href="JS17.html" target="_blank"><button class="button-75" role="button"><span class="text">Шахівниця</span></button></a>
+ <a href="JS18.html" target="_blank"><button class="button-75" role="button"><span class="text">Довільні фігури</span></button></a>
+</aside>
+ 
+<footer>
+    <h2>Мої контакти</h2>
+    <a href="https://youtube.com/@bromy712?si=CQUwtzpL8wdPoMCm" class="fa fa-youtube"></a>
+    <a href="https://x.com/bromytick?s=21" class="fa fa-twitter"></a>
+</footer>
+</body>
+</html>
